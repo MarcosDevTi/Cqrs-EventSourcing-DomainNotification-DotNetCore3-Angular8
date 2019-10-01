@@ -1,0 +1,57 @@
+<h2 class="ml-4">Edit Customer</h2>
+<form class="ml-4 mr-4" [formGroup]="resourceForm" (submit)="submitForm()">
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label>First Name</label>
+      <input class="form-control" formControlName="firstName" placeholder="First Name">
+    </div>
+    <div class="form-group col-md-6">
+      <label>Last Name</label>
+      <input class="form-control" formControlName="lastName" placeholder="Last Name">
+    </div>
+    <div class="form-group col-md-6">
+      <p-calendar
+      id="date"
+              placeholder="Birth Date"
+              formControlName="birthDate"
+              inputStyleClass="form-control"
+              dateFormat="dd/mm/yy"
+              [showButtonBar]="true"
+              ></p-calendar>
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="form-group col-md-12">
+      <label>Email</label>
+      <input type="email" class="form-control" formControlName="email" placeholder="Email">
+    </div>
+  </div>
+
+  <div class="form-row">
+
+    <div class="form-group col-md-3">
+      <label>Street</label>
+      <input type="text" formControlName="street" class="form-control">
+    </div>
+    <div class="form-group col-md-2">
+      <label>Number</label>
+      <input type="text" formControlName="number" class="form-control">
+    </div>
+    <div class="form-group col-md-3">
+      <label>City</label>
+      <input type="text" formControlName="city" class="form-control">
+    </div>
+    <div class="form-group col-md-2">
+      <label for="inputState">Country</label>
+      <input type="text" formControlName="country" class="form-control">
+    </div>
+    <div class="form-group col-md-2">
+      <label>Zip</label>
+      <input type="text" formControlName="zipCode" class="form-control">
+    </div>
+  </div>
+
+  <button type="submit" class="btn btn-primary">Save</button>
+</form>
+
+{{resourceForm.value | json}}

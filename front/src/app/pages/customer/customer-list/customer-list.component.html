@@ -1,0 +1,19 @@
+<button class="float-right btn btn-primary mb-2 mt-2" [routerLink]="['new']" >Add Customer</button>
+<table class="table table-bordered ">
+  <thead>
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Address</th>
+      <th scope="col">Email</th>
+      <th scope="col">Birth Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let resource of resources">
+      <td>{{resource.name}}</td>
+      <td>{{resource.address}}</td>
+      <td>{{resource.email}}</td>
+      <td>{{resource.birthDate}}</td>
+    </tr>
+  </tbody>
+</table>

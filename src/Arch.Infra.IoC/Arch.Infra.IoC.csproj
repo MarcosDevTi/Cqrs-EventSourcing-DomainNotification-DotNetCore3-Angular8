@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="7.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="3.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="3.0.0" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="3.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Arch.Cqrs.Handlers\Arch.Cqrs.Handlers.csproj" />
+    <ProjectReference Include="..\Arch.Infra.Data\Arch.Infra.Data.csproj" />
+    <ProjectReference Include="..\Arch.Infra.EventSourcing\Arch.Infra.EventSourcing.csproj" />
+    <ProjectReference Include="..\Arch.Infra.Shared\Arch.Infra.Shared.csproj" />
+  </ItemGroup>
+
+</Project>
