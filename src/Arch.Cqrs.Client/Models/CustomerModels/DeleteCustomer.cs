@@ -4,7 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Arch.Cqrs.Client.Models.Customer
+namespace Arch.Cqrs.Client.Models.CustomerModels
 {
     public class DeleteCustomer : CustomerCommand
     {

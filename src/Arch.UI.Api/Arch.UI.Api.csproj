@@ -28,7 +28,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Arch.Cqrs.Client\Arch.Cqrs.Client.csproj" />
     <ProjectReference Include="..\Arch.Infra.IoC\Arch.Infra.IoC.csproj" />
     <ProjectReference Include="..\Arch.Infra.Shared\Arch.Infra.Shared.csproj" />
   </ItemGroup>

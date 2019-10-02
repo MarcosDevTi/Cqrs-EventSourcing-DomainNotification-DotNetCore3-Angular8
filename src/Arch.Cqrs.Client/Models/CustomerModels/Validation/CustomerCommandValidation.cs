@@ -1,4 +1,5 @@
-﻿using FluentValidation;
+﻿using Arch.Cqrs.Client.Models.CustomerModels;
+using FluentValidation;
 using System;
 using System.Collections.Generic;
 using System.Text;

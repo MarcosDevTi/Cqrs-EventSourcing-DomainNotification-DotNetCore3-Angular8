@@ -1,4 +1,5 @@
 using Arch.Cqrs.Client.Models.Customer;
+using Arch.Cqrs.Client.Models.CustomerModels;
 using Arch.Infra.Data;
 using Arch.Infra.Shared.Cqrs;
 using AutoMapper;

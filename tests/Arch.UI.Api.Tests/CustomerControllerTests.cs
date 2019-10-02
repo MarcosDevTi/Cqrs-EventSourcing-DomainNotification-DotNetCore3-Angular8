@@ -3,6 +3,7 @@ using Arch.Infra.Shared.Cqrs;
 using Moq;
 using Xunit;
 using Arch.Cqrs.Client.Models.Customer;
+using Arch.Cqrs.Client.Models.CustomerModels;
 
 namespace Arch.UI.Api.Tests
 {

@@ -20,7 +20,6 @@ export class BaseService {
   }
 
   getAll<T>(params: ParamsList): Observable<Grid<T>> {
-    console.log('obj input', params);
     return this.http.post('http://localhost:59761/api/' + this.apiPath + '/list', params).pipe(
       map(this.jsonDataToGridCustomers.bind(this)),
       catchError(this.handleError)
@@ -61,11 +60,11 @@ export class BaseService {
   private jsonDataToGridCustomers<T>(jsonData): Grid<T> {
 
     const customers: T[] = [];
-    console.log('jsonData', jsonData);
-    jsonData.forEach(element => customers.push(element as T));
+    console.log('jsonData', jsonData.total);
+    jsonData.items.forEach(element => customers.push(element as T));
     const head = jsonData.headGrid;
-    const totalItems = jsonData.totalNumberOfItems;
-    const grid = new Grid<T>(customers, head, totalItems);
+    const total = jsonData.total;
+    const grid = new Grid<T>(customers, head, total);
     return grid;
   }
 

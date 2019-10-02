@@ -1,4 +1,5 @@
 ﻿using Arch.Cqrs.Client.Models.Customer;
+using Arch.Cqrs.Client.Models.CustomerModels;
 using Arch.Infra.Shared.Cqrs;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -30,7 +31,8 @@ namespace Arch.UI.Api.Controllers
         [Route("list")]
         public IActionResult GetCustomers(CustomersQuery customersQuery)
         {
-            return Ok(_processor.Get(customersQuery));
+            var result = _processor.Get(customersQuery);
+            return Ok(new { result.Items,  result.Total});
         }
 
         [Route("{id:Guid}")]

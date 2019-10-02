@@ -1,4 +1,5 @@
 ﻿using Arch.Cqrs.Client.Models.Customer;
+using Arch.Cqrs.Client.Models.CustomerModels;
 using Arch.Domain.Entities.ValueObjects;
 using AutoMapper;
 

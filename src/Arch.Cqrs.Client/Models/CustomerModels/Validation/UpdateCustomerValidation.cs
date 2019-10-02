@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Arch.Cqrs.Client.Models.CustomerModels;
+using System;
 using System.Collections.Generic;
 using System.Text;
 

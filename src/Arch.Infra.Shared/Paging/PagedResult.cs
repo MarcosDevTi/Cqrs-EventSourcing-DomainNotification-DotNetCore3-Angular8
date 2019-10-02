@@ -7,20 +7,18 @@ namespace Arch.Infra.Shared.Paging
 {
     public class PagedResult<T> : IEnumerable<T>
     {
-        public PagedResult(IEnumerable<T> items, int totalNumberOfItems, Paging<T> paging)
+        public PagedResult(IEnumerable<T> items, int total, Paging<T> paging)
         {
             Items = items.ToList();
-            TotalNumberOfItems = totalNumberOfItems;
+            Total = total;
             Paging = paging;
         }
 
-        [DataMember]
         public IReadOnlyList<T> Items { get; private set; }
 
         public Paging<T> Paging { get; private set; }
 
-        [DataMember]
-        public int TotalNumberOfItems { get; private set; }
+        public int Total { get; private set; }
 
         public IEnumerator<T> GetEnumerator() => Items.GetEnumerator();
 

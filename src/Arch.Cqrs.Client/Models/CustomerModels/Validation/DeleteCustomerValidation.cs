@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using Arch.Cqrs.Client.Models.CustomerModels;
 
 namespace Arch.Cqrs.Client.Models.Customer.Validation
 {
