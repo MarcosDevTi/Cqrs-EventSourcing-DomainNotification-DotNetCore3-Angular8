@@ -1,5 +1,7 @@
-
-<table class="table table-bordered ">
+<p>page: {{page}}</p>
+<p>total: {{resources.total}}</p>
+<button class="float-right btn btn-primary mb-2 mt-2" [routerLink]="['new']" >Add Customer</button>
+<table class="table table-bordered">
   <thead>
     <tr>
       <th scope="col">Name</th>
@@ -17,22 +19,7 @@
     </tr>
   </tbody>
 </table>
-<nav aria-label="Page navigation example">
-  <ul class="pagination justify-content-end" >
-    <li class="page-item">
-      <a class="page-link" href="#" aria-label="Previous">
-        <span aria-hidden="true">&laquo;</span>
-      </a>
-    </li>
-    <li class="page-item"><a class="page-link" href="#">1</a></li>
-    <li class="page-item"><a class="page-link" href="#">2</a></li>
-    <li class="page-item"><a class="page-link" href="#">3</a></li>
-    <li class="page-item">
-      <a class="page-link" href="#" aria-label="Next">
-        <span aria-hidden="true">&raquo;</span>
-      </a>
-    </li>
-    <li>Total: {{resources.total}}</li>
-  </ul>
-</nav>
+
+<ngb-pagination [collectionSize]="resources.total" [(page)]="page" [maxSize]="5" [rotate]="true" [boundaryLinks]="true" (pageChange)="paginationChange()"></ngb-pagination>
+
 
